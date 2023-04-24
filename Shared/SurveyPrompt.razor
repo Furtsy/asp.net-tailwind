@@ -1,0 +1,15 @@
+﻿<div class="bg-gray-200 rounded-md mt-4 p-4 flex items-center">
+    <span class="oi oi-pencil me-2" aria-hidden="true"></span>
+    <strong class="font-bold">@Title</strong>
+
+<span class="text-nowrap">
+    Please take our
+    <a target="_blank" class="font-bold text-blue-700 hover:underline ml-1" href="https://go.microsoft.com/fwlink/?linkid=2186158">brief survey</a>
+</span>
+ and tell us what you think.
+</div>
+@code {
+// Demonstrates how a parent component can supply parameters
+[Parameter]
+public string? Title { get; set; }
+}

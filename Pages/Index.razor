@@ -1,0 +1,22 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<div class="flex justify-center items-center h-full flex-col">
+    <h1 class="text-3xl font-bold underline text-white">
+        Hello world!
+    </h1>
+    <br>
+    <br>
+    <br>
+    <div class="flex justify-center items-center">
+        <button class="bg-blue-500 text-white py-2 px-4 rounded mr-4" @onclick="@(() => { NavigationManager.NavigateTo("/fetchdata"); })">Fetch Data</button>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded" @onclick="@(() => { NavigationManager.NavigateTo("/counter"); })">Counter</button>
+    </div>
+    <SurveyPrompt Title="How is Blazor working for you?" />
+</div>
+
+@code {
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+}
